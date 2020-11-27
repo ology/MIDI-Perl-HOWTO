@@ -28,7 +28,7 @@ print 'Inverted: ', ddc($inverted);
 my @notes = map { Music::Note->new($_, 'midinum')->format('ISO') } @$inverted;
 print 'New: ', ddc(\@notes);
 
-# Clean-up the chord
+# Clean-up the new chord notes
 for my $i (0 .. $#notes) {
     $notes[$i] =~ s/-1/$octaves[$i]/;
     $notes[$i] =~ s/0/$octaves[$i] + 1/e;
