@@ -12,13 +12,13 @@ $score->write_score("$0.mid");
 
 sub bass {
   for my $n (1 .. 4) {
-    $score->n('hn', 'C3', 'v127');
+    $score->n('hn', 'C3');
   }
 }
 
 sub treble {
   for my $note (qw(C4 D4 E4 F4)) {
-    $score->n('qn', $note, 'v127');
+    $score->n('qn', $note);
     $score->r('qn');
   }
 }
