@@ -10,10 +10,10 @@ my $mcp = Music::Chord::Positions->new;
 
 my $inversion = shift || 1;
 
-my $chord = [qw(C E G)];
-print 'Chord: ', ddc($chord);
+my @chord = qw(C E G);
+print 'Chord: ', ddc(\@chord);
 
-my @pitches = map { Music::Note->new($_ . -1, 'ISO')->format('midinum') } @$chord;
+my @pitches = map { Music::Note->new($_ . -1, 'ISO')->format('midinum') } @chord;
 print 'Pitches: ', ddc(\@pitches);
 
 my $inverted = $mcp->chord_inv(\@pitches, inv_num => $inversion);
