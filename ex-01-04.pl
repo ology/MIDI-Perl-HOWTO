@@ -9,7 +9,7 @@ use MIDI::Util;
 my $score = MIDI::Util::setup_score();
 
 for my $note (qw(C4 D4 E4 F4)) {
-  $score->n('qn', $note, 'v127');
+  $score->n('qn', $note);
   $score->r('qn');
 }
 
