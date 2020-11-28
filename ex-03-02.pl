@@ -4,7 +4,7 @@ use warnings;
 
 use MIDI::Util;
 
-my $score = MIDI::Util::setup_score(bpm => 120, volume => 120);
+my $score = MIDI::Util::setup_score(bpm => 120);
 
 $score->synch(\&bass, \&treble);
 
