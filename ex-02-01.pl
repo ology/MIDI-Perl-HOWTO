@@ -11,8 +11,8 @@ $score->synch(\&bass, \&treble);
 $score->write_score("$0.mid");
 
 sub bass {
-  for my $n (qw(C3 F3 G3 C4)) {
-    $score->n('hn', $n);
+  for my $note (qw(C3 F3 G3 C4)) {
+    $score->n('hn', $note);
   }
 }
 
