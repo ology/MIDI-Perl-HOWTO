@@ -12,8 +12,8 @@ $score->write_score("$0.mid");
 
 sub bass {
   MIDI::Util::set_chan_patch($score, 0, 35);
-  for my $n (1 .. 4) {
-    $score->n('hn', 'C3');
+  for my $note (qw(C3 F3 G3 C4)) {
+    $score->n('hn', $note);
   }
 }
 
