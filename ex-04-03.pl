@@ -33,7 +33,7 @@ sub treble {
     get_scale_MIDI('C', 5, 'major'),
   );
 
-  for my $note (1 .. 4) {
+  for my $n (1 .. 4) {
     my $pitch = $pitches[int rand @pitches];
     $score->n('qn', $pitch);
     $score->r('qn');

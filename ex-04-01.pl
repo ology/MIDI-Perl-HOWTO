@@ -22,7 +22,7 @@ sub treble {
 
   my @pitches = (60, 62, 64, 65, 67, 69, 71, 72);
 
-  for my $note (1 .. 4) {
+  for my $n (1 .. 4) {
     my $pitch = $pitches[int rand @pitches];
     $score->n('qn', $pitch);
     $score->r('qn');
