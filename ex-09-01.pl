@@ -22,7 +22,7 @@ for my $i (1 .. 8) {
   for my $n (1 .. 4) {
     my $pitch = $voice->rand;
 
-    # Get a fluctuating velocity between f and fff
+    # Get a fluctuating volume between f and fff
     my $vol = 'v' . (96 + int(rand 32));
 
     if ($i % 2 == 0) {
