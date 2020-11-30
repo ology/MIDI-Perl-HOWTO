@@ -3,6 +3,7 @@ use strict;
 use warnings;
 
 use Data::Dumper::Compact 'ddc';
+#use MIDI::Simple;
 use Music::Duration;
 
 my %x = %MIDI::Simple::Length;
