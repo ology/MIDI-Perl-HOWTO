@@ -1,0 +1,11 @@
+requires 'Data::Dumper::Compact';
+requires 'MIDI::Drummer::Tiny';
+requires 'MIDI::Simple';
+requires 'MIDI::Util';
+requires 'Music::Chord::Note';
+requires 'Music::Chord::Positions';
+requires 'Music::Duration';
+requires 'Music::Duration::Partition';
+requires 'Music::Note';
+requires 'Music::Scales';
+requires 'Music::VoiceGen';
