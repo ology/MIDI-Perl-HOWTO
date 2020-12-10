@@ -1,10 +1,10 @@
 requires 'Data::Dumper::Compact';
-requires 'Graph';
 requires 'MIDI::Drummer::Tiny';
 requires 'MIDI::Simple';
 requires 'MIDI::Util';
 requires 'Music::Chord::Note', '>= 0.10';
 requires 'Music::Chord::Positions';
+requires 'Music::Chord::Progression';
 requires 'Music::Duration';
 requires 'Music::Duration::Partition';
 requires 'Music::Note';
