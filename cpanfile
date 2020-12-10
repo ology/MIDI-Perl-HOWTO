@@ -1,4 +1,5 @@
 requires 'Data::Dumper::Compact';
+requires 'Graph';
 requires 'MIDI::Drummer::Tiny';
 requires 'MIDI::Simple';
 requires 'MIDI::Util';
