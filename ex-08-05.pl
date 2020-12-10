@@ -2,7 +2,6 @@
 use strict;
 use warnings;
 
-use lib map { "$ENV{HOME}/sandbox/$_/lib" } qw(MIDI-Util);
 use MIDI::Util;
 use Music::Scales qw(get_scale_notes);
 use Music::Chord::Note;
