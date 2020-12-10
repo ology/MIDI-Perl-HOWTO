@@ -12,7 +12,7 @@ my $max  = shift || 8;
 
 my $g = Graph::Directed->new;
 
-# Set our chord progression map
+# Set the chord progression map
 my $progression = {
     1 => [qw(1 2 3 4 5 6)],
     2 => [qw(3 5)],
