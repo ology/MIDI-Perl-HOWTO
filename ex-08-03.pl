@@ -13,24 +13,26 @@ my @pitches = (
 my $score = MIDI::Util::setup_score();
 
 $score->synch(
-  \&dyads,
-  \&single_note,
+  sub { dyads($score, \@pitches) },
+  sub { single_note($score, \@pitches) },
 );
 
 $score->write_score("$0.mid");
 
 sub single_note {
+  my ($s, $pitches) = @_;
   for my $i (1 .. 8) {
     for my $n (1 .. 4) {
-      my $pitch = $pitches[rand int @pitches];
-      $score->n('qn', $pitch);
+      my $pitch = $pitches->[rand int @$pitches];
+      $s->n('qn', $pitch);
     }
   }
 }
 
 sub dyads {
+  my ($s, $pitches) = @_;
   for my $i (1 .. 8) {
-    my $pitch = $pitches[rand int @pitches];
-    $score->n('wn', $pitch, $pitch + 7);
+    my $pitch = $pitches->[rand int @$pitches];
+    $s->n('wn', $pitch, $pitch + 7);
   }
 }
