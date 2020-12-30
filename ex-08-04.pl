@@ -15,11 +15,11 @@ my @chord = qw(C4 E4 G4);
 print 'Chord: ', ddc(\@chord);
 
 # Get the list of octaves for each note
-my @octaves = map { s/[A-G]//r } @chord;
+my @octaves = map { s/[A-G][#b]?//r } @chord;
 print 'Octaves: ', ddc(\@octaves);
 
 # Get the list of note names without octaves
-my @isobase = map { s/\d//r } @chord;
+my @isobase = map { s/\d+//r } @chord;
 print 'ISObase: ', ddc(\@isobase);
 
 # Get the pitch class
