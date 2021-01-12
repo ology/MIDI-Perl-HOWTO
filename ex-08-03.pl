@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-use MIDI::Util;
+use MIDI::Util qw(setup_score);
 use Music::Scales qw(get_scale_MIDI);
 
 my @pitches = (
@@ -10,7 +10,7 @@ my @pitches = (
     get_scale_MIDI('C', 4, 'major'),
 );
 
-my $score = MIDI::Util::setup_score();
+my $score = setup_score();
 
 $score->synch(
   sub { dyads($score, \@pitches) },

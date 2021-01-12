@@ -2,9 +2,9 @@
 use strict;
 use warnings;
 
-use MIDI::Util;
+use MIDI::Util qw(setup_score);
 
-my $score = MIDI::Util::setup_score();
+my $score = setup_score();
 
 $score->synch(\&bass, \&treble);
 

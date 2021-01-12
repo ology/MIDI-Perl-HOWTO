@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-use MIDI::Util;
+use MIDI::Util qw(setup_score);
 use Music::Scales qw(get_scale_MIDI);
 use Music::VoiceGen;
 
@@ -16,7 +16,7 @@ my $voice = Music::VoiceGen->new(
   intervals => [qw(-4 -3 -2 -1 1 2 3 4)],
 );
 
-my $score = MIDI::Util::setup_score(bpm => 120);
+my $score = setup_score(bpm => 120);
 
 for my $i (1 .. 8) {
   for my $n (1 .. 4) {

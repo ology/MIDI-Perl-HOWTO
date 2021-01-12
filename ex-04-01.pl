@@ -2,23 +2,23 @@
 use strict;
 use warnings;
 
-use MIDI::Util;
+use MIDI::Util qw(setup_score set_chan_patch);
 
-my $score = MIDI::Util::setup_score(bpm => 120, volume => 120);
+my $score = setup_score(bpm => 120, volume => 120);
 
 $score->synch(\&bass, \&treble);
 
 $score->write_score("$0.mid");
 
 sub bass {
-  MIDI::Util::set_chan_patch($score, 0, 35);
+  set_chan_patch($score, 0, 35);
   for my $note (qw(C3 F3 G3 C4)) {
     $score->n('hn', $note);
   }
 }
 
 sub treble {
-  MIDI::Util::set_chan_patch($score, 1, 0);
+  set_chan_patch($score, 1, 0);
 
   my @pitches = (60, 62, 64, 65, 67, 69, 71, 72);
 

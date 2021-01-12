@@ -2,17 +2,17 @@
 use strict;
 use warnings;
 
-use MIDI::Util;
+use MIDI::Util qw(setup_score set_chan_patch);
 use Music::Scales qw(get_scale_MIDI);
 
-my $score = MIDI::Util::setup_score(bpm => 120, volume => 120);
+my $score = setup_score(bpm => 120, volume => 120);
 
 $score->synch(\&bass, \&treble);
 
 $score->write_score("$0.mid");
 
 sub bass {
-  MIDI::Util::set_chan_patch($score, 0, 35);
+  set_chan_patch($score, 0, 35);
 
   my @pitches = (
     get_scale_MIDI('C', 2, 'pentatonic'),
@@ -26,7 +26,7 @@ sub bass {
 }
 
 sub treble {
-  MIDI::Util::set_chan_patch($score, 1, 0);
+  set_chan_patch($score, 1, 0);
 
   my @pitches = (
     get_scale_MIDI('C', 4, 'major'),
