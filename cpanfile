@@ -10,4 +10,5 @@ requires 'Music::Duration::Partition';
 requires 'Music::MelodicDevice::Inversion';
 requires 'Music::Note';
 requires 'Music::Scales';
+requires 'Music::ToRoman', '>= 0.1900';
 requires 'Music::VoiceGen';
