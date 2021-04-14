@@ -1,7 +1,7 @@
 requires 'Data::Dumper::Compact';
 requires 'MIDI::Drummer::Tiny';
 requires 'MIDI::Simple';
-requires 'MIDI::Util', '>= 0.0800';
+requires 'MIDI::Util', '>= 0.0900';
 requires 'Music::Chord::Note', '>= 0.10';
 requires 'Music::Chord::Positions';
 requires 'Music::Chord::Progression';
