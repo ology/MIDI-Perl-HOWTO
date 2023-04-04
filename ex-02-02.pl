@@ -9,7 +9,7 @@ my $score = setup_score();
 $score->synch(
   sub { bass($score) },
   sub { treble($score) },
-);
+) for 1 .. 2;
 
 $score->write_score("$0.mid");
 
