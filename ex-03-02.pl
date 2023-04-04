@@ -4,7 +4,9 @@ use warnings;
 
 use MIDI::Util qw(setup_score set_chan_patch);
 
-my $score = setup_score(bpm => 120);
+my $bpm = shift || 120;
+
+my $score = setup_score(bpm => $bpm);
 
 $score->synch(\&bass, \&treble);
 
