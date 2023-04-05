@@ -7,7 +7,10 @@ use Music::Scales qw(get_scale_MIDI);
 
 my $score = setup_score(bpm => 120, volume => 120);
 
-$score->synch(\&bass, \&treble);
+$score->synch(
+  \&bass,
+  \&treble,
+) for 1 .. 4;
 
 $score->write_score("$0.mid");
 
@@ -16,7 +19,7 @@ sub bass {
 
   my @pitches = (
     get_scale_MIDI('C', 2, 'pentatonic'),
-    get_scale_MIDI('C', 3, 'pentatonic'),
+#    get_scale_MIDI('C', 3, 'pentatonic'),
   );
 
   for my $n (1 .. 4) {
